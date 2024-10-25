@@ -162,17 +162,11 @@ cd angry-birds-clone
    - Pause button
    - Level progress indicator
    - Static placement for:
-     - Birds (3 types)
-     - Pigs (3 types)
-     - Blocks (3 materials: wood, glass, steel)
+     - Birds (7 types)
+     - Pigs (6 types)
+     - Blocks (4 materials: wood, glass, steel, TNT)
 
-4. **Pause Screen**
-   - Resume button
-   - Restart level button
-   - Return to menu button
-   - Settings options
-
-5. **Level Complete Screen**
+4. **Level Complete Screen**
    - Star rating display
    - Score display
    - Next level button
