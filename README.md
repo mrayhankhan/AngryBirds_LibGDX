@@ -116,7 +116,7 @@ This project uses [Gradle](https://gradle.org/) to manage dependencies. The Grad
 
 **Note**: Most tasks can be run with `name:` prefix (e.g., `core:clean` only cleans the `core` project)
 
-### Project Setup
+### Project Setup - install libGDX
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/angry-birds-clone.git
