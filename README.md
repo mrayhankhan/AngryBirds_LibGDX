@@ -24,14 +24,6 @@ This project was generated with [gdx-liftoff](https://github.com/libgdx/gdx-lift
 - `core`: Main module with the application logic shared by all platforms.
 - `lwjgl3`: Primary desktop platform using LWJGL3 (called 'desktop' in older docs).
 
-[Previous sections remain the same until Project Structure]
-
-### Project Structure
-
-#### Platforms
-- `core`: Main module with the application logic shared by all platforms.
-- `lwjgl3`: Primary desktop platform using LWJGL3 (called 'desktop' in older docs).
-
 #### Source Code Structure
 ```
 core/src/main/java/com/angrybirds/
@@ -99,7 +91,6 @@ build.gradle               # Gradle build configuration
 - `Losescreen.java`: Screen shown when player loses
 - `WinningScreen.java`: Screen shown when player wins
 
-[Rest of the README remains the same]
 
 ### Gradle Tasks and Usage
 This project uses [Gradle](https://gradle.org/) to manage dependencies. The Gradle wrapper is included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
