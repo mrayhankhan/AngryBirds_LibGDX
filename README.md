@@ -1,122 +1,129 @@
+
 # Angry Birds Clone - Static GUI Implementation
 ## CSE201 Advanced Programming Project
 
-### Github Link : https://github.com/mrayhankhan/AngryBirds_LibGDX
+### GitHub Link: [Angry Birds Clone](https://github.com/mrayhankhan/AngryBirds_LibGDX)
 
-### Team Members
-- M Rayhankhan 2022269 	
-- Raunak Kumar Giri 2023427
+### Team Members:
+- M Rayhankhan - 2022269
+- Raunak Kumar Giri - 2023427
 
-### Project Overview
+### Project Overview:
 A Java-based clone of Angry Birds using the LibGDX framework. This submission implements the static GUI components of the game including all screens, menus, and visual elements without the actual gameplay mechanics.
 
 This project was generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff) and uses a template including simple application launchers and an `ApplicationAdapter` extension.
 
-### Prerequisites
+### Prerequisites:
 - Java Development Kit (JDK) 17 or higher
 - Gradle 7.0 or higher
 - LibGDX 1.12.0
 - Any IDE that supports Java and Gradle (IntelliJ IDEA recommended)
 
-### Project Structure
+### Project Structure:
 
-#### Platforms
+#### Platforms:
 - `core`: Main module with the application logic shared by all platforms.
 - `lwjgl3`: Primary desktop platform using LWJGL3 (called 'desktop' in older docs).
 
-#### Source Code Structure
+#### Source Code Structure:
 ```
-core/src/main/java/com/angrybirds/
+src/main/java/com/angrybird1/
 ├── Assets.java              # Asset management class
-├── Bird.java               # Base bird functionality
-├── Blackbird.java          # Explosive bird type
-├── Block.java              # Block functionality
-├── Bluebird.java          # Blue bird type
-├── Decoypig.java          # Decoy pig enemy
-├── Eagle.java             # Eagle bird type
-├── gamescreen.java        # Main game screen
-├── Gamescreenang.java     # Game screen variation
-├── gameScreenlevel.java   # Level screen implementation
-├── Helmetpig.java         # Helmet-wearing pig enemy
-├── Iceblock.java          # Ice block type
-├── Kingpig.java           # King pig enemy
-├── levelclass.java        # Level management
-├── Losescreen.java        # Game over screen
-├── Mustachepig.java       # Mustache pig enemy
-├── Orangebird.java        # Orange bird type
-├── Pig.java               # Basic pig functionality
-├── Pigengineer.java       # Engineer pig enemy
-├── Steelblock.java        # Steel block type
-├── Whitebird.java         # White bird type
-├── WinningScreen.java     # Victory screen
-├── Woodenblock.java       # Wooden block type
-└── Yellowbird.java        # Yellow bird type
+├── Bird.java                # Base bird functionality
+├── Blackbird.java           # Explosive bird type
+├── Block.java               # Block functionality
+├── Bluebird.java            # Blue bird type
+├── Decoypig.java            # Decoy pig enemy
+├── Eagle.java               # Eagle bird type
+├── gamescreen.java          # Main game screen
+├── Gamescreenang.java       # Alternative game screen
+├── gameScreenlevel.java     # Level screen implementation
+├── Helmetpig.java           # Helmet-wearing pig enemy
+├── Iceblock.java            # Ice block type
+├── Icerectangleblock.java   # Ice rectangular block type
+├── Kingpig.java             # King pig enemy
+├── levelclass.java          # Level management
+├── Losescreen.java          # Game over screen
+├── Mustachepig.java         # Mustache pig enemy
+├── Orangebird.java          # Orange bird type
+├── Pausescreen.java         # Pause screen
+├── Pig.java                 # Basic pig functionality
+├── Pigengineer.java         # Engineer pig enemy
+├── Rectangleblock.java      # Rectangular block type
+├── Slingshot.java           # Slingshot functionality
+├── Steelblock.java          # Steel block type
+├── Whitebird.java           # White bird type
+├── WinningScreen.java       # Victory screen
+├── Woodenblock.java         # Wooden block type
+├── Yellowbird.java          # Yellow bird type
 
-build.gradle               # Gradle build configuration
+build.gradle                 # Gradle build configuration
 ```
 
-### Class Descriptions
+### Class Descriptions:
 
-#### Game Management
-- `Assets.java`: Handles loading and managing all game assets including textures, sounds, and music
-- `levelclass.java`: Manages level creation, loading, and progression
+#### Game Management:
+- `Assets.java`: Handles loading and managing all game assets including textures, sounds, and music.
+- `levelclass.java`: Manages level creation, loading, and progression.
 
-#### Birds
-- `Bird.java`: Contains basic bird functionality and properties
-- `Blackbird.java`: Implementation of the black explosive bird
-- `Bluebird.java`: Implementation of the blue splitting bird
-- `Eagle.java`: Implementation of the eagle bird
-- `Orangebird.java`: Implementation of the orange bird
-- `Whitebird.java`: Implementation of the white egg-dropping bird
-- `Yellowbird.java`: Implementation of the yellow speeding bird
+#### Birds:
+- `Bird.java`: Contains basic bird functionality and properties.
+- `Blackbird.java`: Implementation of the black explosive bird.
+- `Bluebird.java`: Implementation of the blue splitting bird.
+- `Eagle.java`: Implementation of the eagle bird.
+- `Orangebird.java`: Implementation of the orange bird.
+- `Whitebird.java`: Implementation of the white egg-dropping bird.
+- `Yellowbird.java`: Implementation of the yellow speeding bird.
 
-#### Pigs
-- `Pig.java`: Contains basic pig functionality and properties
-- `Decoypig.java`: Implementation of decoy pig
-- `Helmetpig.java`: Implementation of armored pig with helmet
-- `Kingpig.java`: Implementation of the king pig
-- `Mustachepig.java`: Implementation of mustached pig
-- `Pigengineer.java`: Implementation of engineer pig
+#### Pigs:
+- `Pig.java`: Contains basic pig functionality and properties.
+- `Decoypig.java`: Implementation of the decoy pig.
+- `Helmetpig.java`: Implementation of the armored pig with a helmet.
+- `Kingpig.java`: Implementation of the king pig.
+- `Mustachepig.java`: Implementation of the mustached pig.
+- `Pigengineer.java`: Implementation of the engineer pig.
 
-#### Blocks
-- `Block.java`: Contains basic block functionality and properties
-- `Iceblock.java`: Implementation of destructible ice blocks
-- `Steelblock.java`: Implementation of durable steel blocks
-- `Woodenblock.java`: Implementation of wooden blocks
+#### Blocks:
+- `Block.java`: Contains basic block functionality and properties.
+- `Iceblock.java`: Implementation of destructible ice blocks.
+- `Icerectangleblock.java`: Implementation of destructible ice rectangular blocks.
+- `Steelblock.java`: Implementation of durable steel blocks.
+- `Woodenblock.java`: Implementation of wooden blocks.
+- `Rectangleblock.java`: Rectangular block type.
 
-#### Screens
-- `gamescreen.java`: Base game screen implementation
-- `Gamescreenang.java`: Alternative game screen implementation
-- `gameScreenlevel.java`: Level-specific game screen
-- `Losescreen.java`: Screen shown when player loses
-- `WinningScreen.java`: Screen shown when player wins
+#### Screens:
+- `gamescreen.java`: Base game screen implementation.
+- `Gamescreenang.java`: Alternative game screen implementation.
+- `gameScreenlevel.java`: Level-specific game screen.
+- `Losescreen.java`: Screen shown when the player loses.
+- `WinningScreen.java`: Screen shown when the player wins.
+- `Pausescreen.java`: Pause screen during gameplay.
 
-
-### Gradle Tasks and Usage
+### Gradle Tasks and Usage:
 This project uses [Gradle](https://gradle.org/) to manage dependencies. The Gradle wrapper is included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
 
-#### Key Gradle Tasks
-- `lwjgl3:run`: Starts the application
-- `lwjgl3:jar`: Builds application's runnable jar (found at `lwjgl3/build/libs`)
-- `build`: Builds sources and archives of every project
-- `clean`: Removes `build` folders containing compiled classes and built archives
-- `test`: Runs unit tests
+#### Key Gradle Tasks:
+- `lwjgl3:run`: Starts the application.
+- `lwjgl3:jar`: Builds the application's runnable jar (found at `lwjgl3/build/libs`).
+- `build`: Builds sources and archives of every project.
+- `clean`: Removes `build` folders containing compiled classes and built archives.
+- `test`: Runs unit tests.
 
-#### IDE-Specific Tasks
-- `eclipse`: Generates Eclipse project data
-- `cleanEclipse`: Removes Eclipse project data
-- `idea`: Generates IntelliJ project data
-- `cleanIdea`: Removes IntelliJ project data
+#### IDE-Specific Tasks:
+- `eclipse`: Generates Eclipse project data.
+- `cleanEclipse`: Removes Eclipse project data.
+- `idea`: Generates IntelliJ project data.
+- `cleanIdea`: Removes IntelliJ project data.
 
-#### Useful Gradle Flags
-- `--continue`: Errors won't stop tasks from running
-- `--daemon`: Uses Gradle daemon to run tasks
-- `--offline`: Uses cached dependency archives
-- `--refresh-dependencies`: Forces validation of all dependencies (useful for snapshot versions)
+#### Useful Gradle Flags:
+- `--continue`: Errors won't stop tasks from running.
+- `--daemon`: Uses Gradle daemon to run tasks.
+- `--offline`: Uses cached dependency archives.
+- `--refresh-dependencies`: Forces validation of all dependencies (useful for snapshot versions).
 
-**Note**: Most tasks can be run with `name:` prefix (e.g., `core:clean` only cleans the `core` project)
+**Note**: Most tasks can be run with the `name:` prefix (e.g., `core:clean` only cleans the `core` project).
 
-### Project Setup - install libGDX
+### Project Setup - Install LibGDX:
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/angry-birds-clone.git
@@ -127,8 +134,8 @@ cd angry-birds-clone
 - For IntelliJ IDEA:
   - Go to File → Open
   - Navigate to the project directory
-  - Select build.gradle
-  - Choose "Open as Project"
+  - Select `build.gradle`
+  - Choose "Open as Project".
 
 3. Build the project:
 ```bash
@@ -140,79 +147,78 @@ cd angry-birds-clone
 ./gradlew lwjgl3:run
 ```
 
-### Implemented Features (Static)
+### Implemented Features (Static):
 
-#### Screens
-1. **Main Menu**
-   - Play Game button
-   - Level Select button
-   - Settings button
-   - Exit button
-   - Background animation
+#### Screens:
+1. **Main Menu**:
+   - Play Game button.
+   - Level Select button.
+   - Settings button.
+   - Exit button.
+   - Background animation.
 
-2. **Level Select**
-   - 3 level buttons with preview images
-   - Return to main menu button
-   - Level unlock status indicators
+2. **Level Select**:
+   - 3 level buttons with preview images.
+   - Return to main menu button.
+   - Level unlock status indicators.
 
-3. **Game Screen**
-   - Slingshot placement
-   - Bird queue display
-   - Score display
-   - Pause button
-   - Level progress indicator
+3. **Game Screen**:
+   - Slingshot placement.
+   - Bird queue display.
+   - Score display.
+   - Pause button.
+   - Level progress indicator.
    - Static placement for:
-     - Birds (7 types)
-     - Pigs (6 types)
-     - Blocks (4 materials: wood, glass, steel, TNT)
+     - Birds (7 types).
+     - Pigs (6 types).
+     - Blocks (4 materials: wood, glass, steel, TNT).
 
-4. **Level Complete Screen**
-   - Star rating display
-   - Score display
-   - Next level button
-   - Retry level button
-   - Return to menu button
+4. **Level Complete Screen**:
+   - Star rating display.
+   - Score display.
+   - Next level button.
+   - Retry level button.
+   - Return to menu button.
 
-### Controls (Static Implementation)
-- Click and drag functionality for birds (visual only)
-- Click interactions for all buttons
-- Menu navigation
-- Screen transitions
+### Controls (Static Implementation):
+- Click and drag functionality for birds (visual only).
+- Click interactions for all buttons.
+- Menu navigation.
+- Screen transitions.
 
-### Asset Credits
+### Asset Credits:
 All assets used in this project are either:
-1. Created by the team
+1. Created by the team.
 2. Used under appropriate licenses from:
-   - [List external asset sources here]
+   - [List external asset sources here].
 
-### Known Issues
-1. Some button hover effects may not display correctly on Linux systems
-2. Screen transition animations occasionally stutter on lower-end systems
+### Known Issues:
+1. Some button hover effects may not display correctly on Linux systems.
+2. Screen transition animations occasionally stutter on lower-end systems.
 
-### Development Notes
-- The project uses Scene2D.ui for all UI elements
-- Texture atlases are used for efficient rendering
-- Screen transitions use the LibGDX Screen interface
-- All fonts are loaded using FreeTypeFontGenerator
-- Viewport is configured for multiple screen resolutions
+### Development Notes:
+- The project uses Scene2D.ui for all UI elements.
+- Texture atlases are used for efficient rendering.
+- Screen transitions use the LibGDX Screen interface.
+- All fonts are loaded using FreeTypeFontGenerator.
+- Viewport is configured for multiple screen resolutions.
 
-### Testing
+### Testing:
 To run the basic UI tests:
 ```bash
 ./gradlew test
 ```
 
-### Building for Distribution
+### Building for Distribution:
 To create a distributable JAR:
 ```bash
 ./gradlew lwjgl3:jar
 ```
 The JAR will be located in `lwjgl3/build/libs/`.
 
-
-### References
+### References:
 1. LibGDX Documentation: https://libgdx.com/wiki/
 2. Scene2D.ui Tutorial: https://github.com/libgdx/libgdx/wiki/Scene2d.ui
 
-### Version
-- Static GUI Implementation (Deadline 2)
+### Version:
+- Static GUI Implementation (Deadline 2).
