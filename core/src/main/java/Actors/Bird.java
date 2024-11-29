@@ -78,6 +78,8 @@ public class Bird extends Actor {
             getWidth(), getHeight());
     }
 
+
+
     @Override
     public void act(float delta) {
         super.act(delta); // Call the parent class' act method

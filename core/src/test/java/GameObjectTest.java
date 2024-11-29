@@ -16,7 +16,6 @@ public class GameObjectTest {
 
     @BeforeEach
     public void setUp() {
-        // Setting up the world with gravity
         world = new World(new Vector2(0, -9.8f), true); // Create a physics world with gravity
         redBird = new Bird(world, 0);  // Create a RedBird with a texture index 0
         pig = new Pig(world, 1, 1);  // Create a Pig with a texture index 1
@@ -27,28 +26,26 @@ public class GameObjectTest {
 
     @Test
     public void testRedBirdCreation() {
-        // Test that the RedBird is correctly created and has a body
         assertNotNull(redBird, "RedBird should be created.");
         assertNotNull(redBird.getBody(), "RedBird should have a Box2D body.");
     }
 
     @Test
     public void testPigCreation() {
-        // Test that the Pig is correctly created and has a body
         assertNotNull(pig, "Pig should be created.");
         assertNotNull(pig.getBody(), "Pig should have a Box2D body.");
     }
 
     @Test
     public void testBlockCreation() {
-        // Test that the Block is correctly created and has a body
+
         assertNotNull(block, "Block should be created.");
         assertNotNull(block.getBody(), "Block should have a Box2D body.");
     }
 
     @Test
     public void testRedBirdLaunch() {
-        // Test that RedBird is launched with an initial velocity
+
         redBird.getBody().setLinearVelocity(10f, 10f); // Apply some velocity
         assertTrue(redBird.getBody().getLinearVelocity().x > 0, "RedBird should have positive x velocity.");
         assertTrue(redBird.getBody().getLinearVelocity().y > 0, "RedBird should have positive y velocity.");
@@ -75,7 +72,6 @@ public class GameObjectTest {
 
     @Test
     public void testWorldStep() {
-        // Test the world's step method (ensure physics updates)
         world.step(1/60f, 6, 2); // Simulate a step
         assertNotNull(world, "World should be updated with physics.");
     }
