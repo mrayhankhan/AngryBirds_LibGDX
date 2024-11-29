@@ -8,10 +8,6 @@ buildscript {
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
     maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
   }
-  dependencies {
-
-
-  }
 }
 
 allprojects {
@@ -54,11 +50,21 @@ configure(subprojects) {
   compileJava {
     options.incremental = true
   }
+
+  dependencies {
+    // JUnit 5 dependencies
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
+  }
+
+  test {
+    useJUnitPlatform()
+  }
 }
 
 subprojects {
   version = '$projectVersion'
-  ext.appName = 'angrybird1'
+  ext.appName = 'AngryBird'
   repositories {
     mavenCentral()
     maven { url 'https://s01.oss.sonatype.org' }
@@ -70,4 +76,4 @@ subprojects {
   }
 }
 
-eclipse.project.name = 'angrybird1' + '-parent'
+eclipse.project.name = 'AngryBird' + '-parent'
